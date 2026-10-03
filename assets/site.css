@@ -157,3 +157,21 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 .legal section a{color:var(--accent-ink);overflow-wrap:anywhere}
 .host{font:15px var(--mono)}
 @media (prefers-color-scheme:dark){.phone{box-shadow:0 0 0 1px #3A3D44,0 30px 60px -20px rgba(0,0,0,.6)}}
+
+/* 404 */
+.not-found{padding-top:48px;padding-bottom:120px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.not-found > *{max-width:760px}
+.not-found .code{margin:0;font:500 clamp(72px,14vw,140px)/1 var(--mono);letter-spacing:-.04em;color:var(--accent)}
+.not-found h1{margin:0;font-size:clamp(32px,4.6vw,48px);line-height:1.1}
+.actions{margin:8px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.button{min-height:48px;padding:0 22px;border-radius:14px;display:inline-flex;align-items:center;background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none}
+.button:hover{filter:brightness(1.08)}
+
+/* link preview image, rendered by render_og_images.py */
+.og{width:1200px;height:630px;overflow:hidden;display:flex;align-items:center;gap:40px;padding:0 0 0 80px;background:var(--bg)}
+.og-text{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:26px}
+.og .brand span{font-size:34px}
+.og h1{margin:0;font-size:76px;line-height:1.02;letter-spacing:-.035em}
+.og p{margin:0;font-size:28px;line-height:1.4;color:var(--muted)}
+.og .hero-visual{flex:0 0 470px;align-self:flex-start;padding-top:70px}
+.og .hero-visual::before{top:290px;width:520px;max-width:none}
