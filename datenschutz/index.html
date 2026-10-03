@@ -4,51 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datenschutz – Cambiora</title>
-<style>
-:root{--bg:#F3F2EE;--surface:#FFFFFF;--ink:#16181D;--muted:#5E6168;--accent:#C8401A;--line:#EEECE6}
-@media (prefers-color-scheme: dark){:root{--bg:#121316;--surface:#1C1E22;--ink:#F2F1ED;--muted:#A3A6AD;--accent:#FF7A4D;--line:#2A2D33}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
-.brand{font-weight:700;font-size:22px;color:var(--accent);text-decoration:none}
-nav a{color:var(--muted);margin-left:16px}
-h1{font-size:28px;line-height:1.25;margin:0 0 8px}
-h2{font-size:18px;margin:28px 0 6px}
-.card{background:var(--surface);border-radius:16px;padding:20px 22px}
-a{color:var(--accent)}
-.muted{color:var(--muted)}
-footer{margin-top:32px;font-size:14px;color:var(--muted)}
-</style>
+<meta name="description" content="Cambiora rechnet Währungen um – schnell, genau und ohne Werbung. Auch offline, und mit Rechner direkt im Eingabefeld.">
+<meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://cambiora.com/privacy/">
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/sora-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<main>
-<header><a class="brand" href="/">Cambiora</a><nav><a href="/datenschutz/" lang="de">Datenschutz</a><a href="/privacy/" lang="en">Privacy</a></nav></header>
-<div class="card"><h1>Datenschutzerklärung</h1>
-<p><strong>Stand:</strong> 3. Oktober 2026</p>
-<h2>Verantwortlich</h2>
+<header class="wrap site-header">
+<a class="brand" href="/"><img src="/assets/icon.svg" width="36" height="36" alt=""><span>Cambiora</span></a>
+<nav class="nav" aria-label="Hauptnavigation"><a href="/#funktionen">Funktionen</a><a href="/datenschutz/" aria-current="page">Datenschutz</a><a href="mailto:contact@cambiora.com">Kontakt</a><a href="/privacy/" lang="en" hreflang="en">English</a></nav>
+</header>
+<main class="legal">
+<div>
+<h1 class="display">Datenschutzerklärung</h1>
+<p class="meta"><span>Stand: 3. Oktober 2026</span><span aria-hidden="true">·</span><a href="/privacy/" lang="en" hreflang="en">English version</a></p>
+</div>
+<div class="summary"><h2>Kurz gesagt</h2><p>Cambiora braucht kein Konto und enthält keine Werbung, kein Tracking und keine Analyse-Werkzeuge. Wir erheben keine personenbezogenen Daten. Was du in der App einstellst, bleibt auf deinem Gerät.</p></div>
+<article>
+<section><h2>Verantwortlich</h2>
 <p>René Winkler<br>E-Mail: <a href="mailto:contact@cambiora.com">contact@cambiora.com</a></p>
-<h2>Kurz gesagt</h2>
-<p>Cambiora braucht kein Konto und enthält keine Werbung, kein Tracking und keine Analyse-Werkzeuge. Wir erheben keine personenbezogenen Daten. Was du in der App einstellst, bleibt auf deinem Gerät.</p>
-<h2>Daten auf deinem Gerät</h2>
+</section>
+<section><h2>Daten auf deinem Gerät</h2>
 <p>Cambiora speichert lokal auf deinem Gerät:</p>
 <ul><li>deine Einstellungen (z. B. Design, Sprache, Zahlenformat),</li><li>deine Währungsauswahl, ihre Reihenfolge und den zuletzt eingegebenen Betrag,</li><li>die zuletzt geladenen Wechselkurse und den Kursverlauf, damit die App offline funktioniert,</li><li>die Einstellungen deiner Homescreen-Widgets.</li></ul>
 <p>Diese Daten verlassen dein Gerät nicht und werden von uns nicht eingesehen. Sie werden gelöscht, wenn du die App deinstallierst oder ihre Daten in den Systemeinstellungen löschst. Ob sie in die Sicherung deines Geräts (z. B. Google- oder iCloud-Backup) aufgenommen werden, bestimmen deine Systemeinstellungen.</p>
-<h2>Abruf der Wechselkurse</h2>
+</section>
+<section><h2>Abruf der Wechselkurse</h2>
 <p>Um aktuelle Kurse zu laden, ruft die App öffentliche Kursdienste direkt ab:</p>
-<ul><li>Frankfurter (api.frankfurter.dev) für die Referenzkurse der Europäischen Zentralbank und den Kursverlauf,</li><li>currency-api über jsDelivr (cdn.jsdelivr.net) bzw. Cloudflare Pages (currency-api.pages.dev) für weitere Währungen und Edelmetalle,</li><li>Coinbase (api.coinbase.com) für Kryptowährungen.</li></ul>
+<ul><li>Frankfurter (<span class="host">api.frankfurter.dev</span>) für die Referenzkurse der Europäischen Zentralbank und den Kursverlauf,</li><li>currency-api über jsDelivr (<span class="host">cdn.jsdelivr.net</span>) bzw. Cloudflare Pages (<span class="host">currency-api.pages.dev</span>) für weitere Währungen und Edelmetalle,</li><li>Coinbase (<span class="host">api.coinbase.com</span>) für Kryptowährungen.</li></ul>
 <p>Die Anfragen enthalten keine Angaben über dich, deine Auswahl oder deine Beträge. Wie bei jedem Abruf im Internet erhalten die Anbieter technisch bedingt deine IP-Adresse, den Zeitpunkt und Angaben zum Gerätetyp bzw. zur App-Version. Für diese Verarbeitung sind die jeweiligen Anbieter nach ihren eigenen Datenschutzbestimmungen verantwortlich. Wir erhalten diese Daten nicht.</p>
 <p>Auch die Homescreen-Widgets aktualisieren die Kurse über diese Dienste, ungefähr einmal pro Stunde im Hintergrund, solange ein Widget platziert ist.</p>
-<h2>Käufe (Cambiora Pro)</h2>
+</section>
+<section><h2>Käufe (Cambiora Pro)</h2>
 <p>Der Kauf von Cambiora Pro wird vollständig über Google Play bzw. den App Store abgewickelt. Zahlungsdaten erhalten wir nicht. Die App erfährt vom Store nur, ob Pro gekauft wurde, und speichert diesen Status lokal.</p>
-<h2>Kamera (Preise scannen)</h2>
+</section>
+<section><h2>Kamera (Preise scannen)</h2>
 <p>Wenn du die Funktion „Preise scannen“ nutzt, fragt die App nach Zugriff auf die Kamera. Statt der Kamera kannst du auch ein Foto aus deiner Galerie wählen; die App erhält dann nur dieses eine Foto. Die Texterkennung läuft auf deinem Gerät. Cambiora speichert die Bilder nicht und überträgt sie nicht.</p>
-<h2>Deine Rechte</h2>
+</section>
+<section><h2>Deine Rechte</h2>
 <p>Da wir keine personenbezogenen Daten über dich erheben oder speichern, können wir dazu in der Regel keine Auskunft geben oder Daten löschen; alle Daten der App liegen nur auf deinem Gerät und lassen sich dort löschen. Bei Fragen erreichst du uns unter <a href="mailto:contact@cambiora.com">contact@cambiora.com</a>. Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (in der Schweiz beim EDÖB, in der EU bei der Behörde deines Wohnsitzlandes).</p>
-<h2>Änderungen</h2>
+</section>
+<section><h2>Änderungen</h2>
 <p>Wenn sich die App so ändert, dass dies den Datenschutz betrifft, passen wir diese Erklärung an. Die aktuelle Fassung findest du unter <a href="https://cambiora.com/datenschutz/">https://cambiora.com/datenschutz/</a>.</p>
-</div>
-<footer>Cambiora · <a href="mailto:contact@cambiora.com">contact@cambiora.com</a></footer>
+</section>
+</article>
 </main>
+<footer class="site-footer"><div class="wrap">
+<div class="brand-small"><img src="/assets/icon.svg" width="28" height="28" alt=""><b>Cambiora</b><span>· © 2026</span></div>
+<nav aria-label="Fusszeile">
+<a href="/datenschutz/">Datenschutz</a>
+<a href="/privacy/" lang="en">Privacy policy</a>
+<a href="mailto:contact@cambiora.com">contact@cambiora.com</a>
+</nav>
+</div></footer>
 </body>
 </html>

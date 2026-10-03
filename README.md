@@ -1,4 +1,6 @@
 # cambiora.com
 
 Statische Website von Cambiora (GitHub Pages).
-Die Datenschutzerklärung wird aus `docs/store/privacy-policy.md` im App-Repo erzeugt.
+Erzeugt mit `tool/build_website.py` im App-Repo; Design in `design/prototype/Website*.dc.html`,
+Datenschutzerklärung aus `docs/store/privacy-policy.md`.
+Schriften: IBM Plex und Sora, SIL Open Font License (`assets/fonts/OFL-*.txt`).

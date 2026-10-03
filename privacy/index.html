@@ -4,51 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy – Cambiora</title>
-<style>
-:root{--bg:#F3F2EE;--surface:#FFFFFF;--ink:#16181D;--muted:#5E6168;--accent:#C8401A;--line:#EEECE6}
-@media (prefers-color-scheme: dark){:root{--bg:#121316;--surface:#1C1E22;--ink:#F2F1ED;--muted:#A3A6AD;--accent:#FF7A4D;--line:#2A2D33}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
-.brand{font-weight:700;font-size:22px;color:var(--accent);text-decoration:none}
-nav a{color:var(--muted);margin-left:16px}
-h1{font-size:28px;line-height:1.25;margin:0 0 8px}
-h2{font-size:18px;margin:28px 0 6px}
-.card{background:var(--surface);border-radius:16px;padding:20px 22px}
-a{color:var(--accent)}
-.muted{color:var(--muted)}
-footer{margin-top:32px;font-size:14px;color:var(--muted)}
-</style>
+<meta name="description" content="Cambiora converts currencies – fast, precise and without ads. Works offline, with a calculator right in the amount.">
+<meta name="theme-color" content="#F3F2EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="de" href="https://cambiora.com/datenschutz/">
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/sora-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<main>
-<header><a class="brand" href="/">Cambiora</a><nav><a href="/datenschutz/" lang="de">Datenschutz</a><a href="/privacy/" lang="en">Privacy</a></nav></header>
-<div class="card"><h1>Privacy policy</h1>
-<p><strong>Last updated:</strong> 3 October 2026</p>
-<h2>Controller</h2>
+<header class="wrap site-header">
+<a class="brand" href="/en/"><img src="/assets/icon.svg" width="36" height="36" alt=""><span>Cambiora</span></a>
+<nav class="nav" aria-label="Main navigation"><a href="/en/#features">Features</a><a href="/privacy/" aria-current="page">Privacy</a><a href="mailto:contact@cambiora.com">Contact</a><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></nav>
+</header>
+<main class="legal">
+<div>
+<h1 class="display">Privacy policy</h1>
+<p class="meta"><span>Last updated: 3 October 2026</span><span aria-hidden="true">·</span><a href="/datenschutz/" lang="de" hreflang="de">Deutsche Fassung</a></p>
+</div>
+<div class="summary"><h2>In short</h2><p>Cambiora needs no account and contains no ads, no tracking and no analytics tools. We do not collect any personal data. What you set up in the app stays on your device.</p></div>
+<article>
+<section><h2>Controller</h2>
 <p>René Winkler<br>Email: <a href="mailto:contact@cambiora.com">contact@cambiora.com</a></p>
-<h2>In short</h2>
-<p>Cambiora needs no account and contains no ads, no tracking and no analytics tools. We do not collect any personal data. What you set up in the app stays on your device.</p>
-<h2>Data on your device</h2>
+</section>
+<section><h2>Data on your device</h2>
 <p>Cambiora stores locally on your device:</p>
 <ul><li>your settings (e.g. theme, language, number format),</li><li>your selected currencies, their order and the last amount you entered,</li><li>the most recently loaded exchange rates and rate history, so the app works offline,</li><li>the settings of your home screen widgets.</li></ul>
 <p>This data does not leave your device and we cannot see it. It is deleted when you uninstall the app or clear its data in the system settings. Whether it is included in your device backup (e.g. Google or iCloud backup) depends on your system settings.</p>
-<h2>Loading exchange rates</h2>
+</section>
+<section><h2>Loading exchange rates</h2>
 <p>To load current rates, the app requests public rate services directly:</p>
-<ul><li>Frankfurter (api.frankfurter.dev) for the European Central Bank reference rates and rate history,</li><li>currency-api via jsDelivr (cdn.jsdelivr.net) or Cloudflare Pages (currency-api.pages.dev) for further currencies and precious metals,</li><li>Coinbase (api.coinbase.com) for crypto currencies.</li></ul>
+<ul><li>Frankfurter (<span class="host">api.frankfurter.dev</span>) for the European Central Bank reference rates and rate history,</li><li>currency-api via jsDelivr (<span class="host">cdn.jsdelivr.net</span>) or Cloudflare Pages (<span class="host">currency-api.pages.dev</span>) for further currencies and precious metals,</li><li>Coinbase (<span class="host">api.coinbase.com</span>) for crypto currencies.</li></ul>
 <p>These requests contain no information about you, your selection or your amounts. As with any internet request, the providers technically receive your IP address, the time and information about the device type or app version. The respective providers are responsible for this processing under their own privacy policies. We do not receive this data.</p>
 <p>The home screen widgets also refresh rates through these services, about once per hour in the background, as long as a widget is placed.</p>
-<h2>Purchases (Cambiora Pro)</h2>
+</section>
+<section><h2>Purchases (Cambiora Pro)</h2>
 <p>Buying Cambiora Pro is handled entirely by Google Play or the App Store. We do not receive any payment data. The app only learns from the store whether Pro was purchased and stores this status locally.</p>
-<h2>Camera (price scan)</h2>
+</section>
+<section><h2>Camera (price scan)</h2>
 <p>When you use "Scan prices", the app asks for access to the camera. Instead of the camera you can also pick a photo from your gallery; the app then only receives that one photo. Text recognition runs on your device. Cambiora does not store or transmit the images.</p>
-<h2>Your rights</h2>
+</section>
+<section><h2>Your rights</h2>
 <p>As we do not collect or store personal data about you, we generally cannot provide information about or delete such data; all app data is stored only on your device and can be deleted there. If you have questions, contact us at <a href="mailto:contact@cambiora.com">contact@cambiora.com</a>. You have the right to lodge a complaint with a data protection authority (in Switzerland the FDPIC, in the EU the authority of your country of residence).</p>
-<h2>Changes</h2>
+</section>
+<section><h2>Changes</h2>
 <p>If the app changes in a way that affects privacy, we will update this policy. The current version is available at <a href="https://cambiora.com/privacy/">https://cambiora.com/privacy/</a>.</p>
-</div>
-<footer>Cambiora · <a href="mailto:contact@cambiora.com">contact@cambiora.com</a></footer>
+</section>
+</article>
 </main>
+<footer class="site-footer"><div class="wrap">
+<div class="brand-small"><img src="/assets/icon.svg" width="28" height="28" alt=""><b>Cambiora</b><span>· © 2026</span></div>
+<nav aria-label="Footer">
+<a href="/privacy/">Privacy</a>
+<a href="/datenschutz/" lang="de">Datenschutz</a>
+<a href="mailto:contact@cambiora.com">contact@cambiora.com</a>
+</nav>
+</div></footer>
 </body>
 </html>
