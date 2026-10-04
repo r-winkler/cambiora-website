@@ -59,6 +59,8 @@ a{color:inherit}
 .lang-menu ul a{display:block;padding:10px 12px;white-space:nowrap;border-radius:10px;color:var(--ink)}
 .lang-menu ul a:hover{background:var(--tint)}
 .lang-menu ul a[aria-current]{color:var(--accent-ink);font-weight:600}
+/* Two columns on narrow screens, filled top to bottom; --rows comes from build_website.py. */
+@media (max-width:480px){.lang-menu ul{display:grid;grid-auto-flow:column;grid-template-rows:repeat(var(--rows),auto);column-gap:2px}}
 .site-footer{border-top:1px solid var(--line)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:32px;padding-bottom:40px;font-size:15px;color:var(--muted)}
 .site-footer .brand-small{display:flex;align-items:center;gap:10px}
