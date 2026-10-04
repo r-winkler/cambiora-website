@@ -44,6 +44,15 @@
 @font-face{font-family:"Noto Sans SC";font-weight:400;font-display:swap;src:url(fonts/noto-sans-sc-400.woff2) format("woff2")}
 @font-face{font-family:"Noto Sans SC";font-weight:600;font-display:swap;src:url(fonts/noto-sans-sc-600.woff2) format("woff2")}
 @font-face{font-family:"Noto Sans SC";font-weight:700;font-display:swap;src:url(fonts/noto-sans-sc-700.woff2) format("woff2")}
+/* Arabic and Persian (one subset), Hebrew: same pattern, four weights (Medium for the menu and the Mono amounts). */
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-arab-400.woff2) format("woff2");unicode-range:U+0600-06FF,U+200C-200D}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:500;font-display:swap;src:url(fonts/ibm-plex-sans-arab-500.woff2) format("woff2");unicode-range:U+0600-06FF,U+200C-200D}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-arab-600.woff2) format("woff2");unicode-range:U+0600-06FF,U+200C-200D}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-arab-700.woff2) format("woff2");unicode-range:U+0600-06FF,U+200C-200D}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-hebr-400.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:500;font-display:swap;src:url(fonts/ibm-plex-sans-hebr-500.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-hebr-600.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
+@font-face{font-family:"IBM Plex Sans Hebrew";font-weight:700;font-display:swap;src:url(fonts/ibm-plex-sans-hebr-700.woff2) format("woff2");unicode-range:U+0590-05FF,U+FB1D-FB4F}
 /* Native names in the language menu, on every page (Medium, like the menu). */
 @font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-cyrl.woff2) format("woff2");unicode-range:U+0400-04FF}
 @font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-thai.woff2) format("woff2");unicode-range:U+0E01-0E5B}
@@ -51,6 +60,8 @@
 @font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-kr.woff2) format("woff2");unicode-range:U+AC00-D7AF}
 @font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-tc.woff2) format("woff2");unicode-range:U+4E2D,U+6587,U+7E41,U+9AD4}
 @font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-sc.woff2) format("woff2");unicode-range:U+4E2D,U+4F53,U+6587,U+7B80}
+@font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-arab.woff2) format("woff2");unicode-range:U+0600-06FF}
+@font-face{font-family:"Cambiora Names";font-weight:500;font-display:swap;src:url(fonts/names-hebr.woff2) format("woff2");unicode-range:U+0590-05FF}
 
 :root{
   --bg:#F3F2EE;--surface:#FFFFFF;--surface-alt:#EAE8E2;--ink:#16181D;--muted:#5E6168;--line:#E2DFD7;--outline:#C9C6BD;
@@ -62,8 +73,8 @@
   --display:"Sora","Cambiora Names","Helvetica Neue",Helvetica,Arial,sans-serif;
   color-scheme:light dark;
 }
-/* Latin text keeps IBM Plex and Sora; the language's font draws its own script. Sora has no CJK or Thai,
-   so headings fall back to the language's font at weight 700. */
+/* Latin text keeps IBM Plex and Sora; the language's font draws its own script. Sora has no CJK, Thai, Arabic or
+   Hebrew, so headings fall back to the language's font at weight 700. Persian amounts use Persian digits in Mono. */
 html:lang(vi) .display{font-family:"IBM Plex Sans Display","IBM Plex Sans",sans-serif}
 html:lang(uk),html:lang(ru){--sans:"IBM Plex Sans","IBM Plex Sans Cyrillic","Cambiora Names",sans-serif;--display:"Sora","IBM Plex Sans Cyrillic","Cambiora Names",sans-serif}
 html:lang(uk) .display,html:lang(ru) .display{font-family:"IBM Plex Sans Cyrillic","IBM Plex Sans",sans-serif}
@@ -72,6 +83,9 @@ html:lang(ja){--sans:"IBM Plex Sans","IBM Plex Sans JP","Cambiora Names",sans-se
 html:lang(ko){--sans:"IBM Plex Sans","IBM Plex Sans KR","Cambiora Names",sans-serif;--display:"Sora","IBM Plex Sans KR","Cambiora Names",sans-serif}
 html:lang(zh-Hant){--sans:"IBM Plex Sans","Noto Sans TC","Cambiora Names",sans-serif;--display:"Sora","Noto Sans TC","Cambiora Names",sans-serif}
 html:lang(zh-Hans){--sans:"IBM Plex Sans","Noto Sans SC","Cambiora Names",sans-serif;--display:"Sora","Noto Sans SC","Cambiora Names",sans-serif}
+html:lang(ar),html:lang(fa){--sans:"IBM Plex Sans","IBM Plex Sans Arabic","Cambiora Names",sans-serif;--display:"Sora","IBM Plex Sans Arabic","Cambiora Names",sans-serif;
+  --mono:"IBM Plex Mono","IBM Plex Sans Arabic",ui-monospace,SFMono-Regular,Menlo,monospace}
+html:lang(he){--sans:"IBM Plex Sans","IBM Plex Sans Hebrew","Cambiora Names",sans-serif;--display:"Sora","IBM Plex Sans Hebrew","Cambiora Names",sans-serif}
 @media (prefers-color-scheme:dark){:root{
   --bg:#121316;--surface:#1C1E22;--surface-alt:#17181B;--ink:#F2F1ED;--muted:#A3A6AD;--line:#2A2D33;--outline:#3A3D44;
   --accent:#FF7A4D;--accent-ink:#FF9A76;--on-accent:#121316;--tint:#3A231B;--band:#1A1B1F;
@@ -82,8 +96,8 @@ html:lang(zh-Hans){--sans:"IBM Plex Sans","Noto Sans SC","Cambiora Names",sans-s
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans)}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding-left:24px;padding-right:24px}
-@media (max-width:480px){.wrap{padding-left:16px;padding-right:16px}}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+@media (max-width:480px){.wrap{padding-inline:16px}}
 .display{font-family:var(--display);font-weight:700;letter-spacing:-.03em}
 .muted{color:var(--muted)}
 .check{flex-shrink:0;color:var(--accent)}
@@ -100,19 +114,20 @@ a{color:inherit}
 .lang-menu{position:relative}
 .lang-menu summary{display:flex;align-items:center;gap:4px;min-height:44px;padding:0 12px;list-style:none;cursor:pointer;color:var(--muted)}
 .lang-menu summary::-webkit-details-marker{display:none}
+/* Down chevron: physical borders, it looks the same in both directions. */
 .lang-menu summary::after{content:"";width:7px;height:7px;margin-top:-4px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
 .lang-menu summary:hover,.lang-menu[open] summary{color:var(--ink)}
-.lang-menu ul{position:absolute;right:0;top:100%;z-index:10;min-width:160px;margin:4px 0 0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.14)}
+.lang-menu ul{position:absolute;inset-inline-end:0;top:100%;z-index:10;min-width:160px;margin:4px 0 0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.14)}
 .lang-menu ul a{display:block;padding:10px 12px;white-space:nowrap;border-radius:10px;color:var(--ink)}
 .lang-menu ul a:hover{background:var(--tint)}
 .lang-menu ul a[aria-current]{color:var(--accent-ink);font-weight:600}
 /* Two columns on narrow screens, filled top to bottom; --rows comes from build_website.py. The menu hangs from the
-   header's right edge: with long navigation labels (th, vi) the button wraps to the left and the menu would leave the screen. */
+   header's end edge: with long navigation labels (th, vi) the button wraps to the start and the menu would leave the screen. */
 @media (max-width:480px){
   .lang-menu ul{display:grid;grid-auto-flow:column;grid-template-rows:repeat(var(--rows),auto);column-gap:2px}
   .site-header{position:relative}
   .lang-menu{position:static}
-  .lang-menu ul{right:16px;top:calc(100% - 16px)}
+  .lang-menu ul{inset-inline-end:16px;top:calc(100% - 16px)}
 }
 .site-footer{border-top:1px solid var(--line)}
 .site-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-top:32px;padding-bottom:40px;font-size:15px;color:var(--muted)}
@@ -125,12 +140,12 @@ a{color:inherit}
 /* hero */
 .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:56px 48px;padding-top:40px;padding-bottom:96px}
 .hero-text{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:22px}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;border-radius:999px;background:var(--tint);color:var(--accent-ink);font-size:14px;font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:8px;padding-block:6px;padding-inline:10px 14px;border-radius:999px;background:var(--tint);color:var(--accent-ink);font-size:14px;font-weight:600}
 .pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
 .hero h1{margin:0;font-size:clamp(40px,5.6vw,68px);line-height:1.04;letter-spacing:-.035em}
 .lead{margin:0;max-width:34em;font-size:20px;line-height:1.5;color:var(--muted)}
 .stores{display:flex;flex-wrap:wrap;gap:12px;padding-top:6px}
-.store{min-height:56px;padding:8px 20px 8px 16px;border-radius:16px;display:flex;align-items:center;gap:12px;line-height:1.2}
+.store{min-height:56px;padding-block:8px;padding-inline:16px 20px;border-radius:16px;display:flex;align-items:center;gap:12px;line-height:1.2}
 .store small{display:block;font-size:12px}
 .store b{display:block;font-size:16px;font-weight:600}
 .store-dark{background:var(--ink);color:var(--bg)}
@@ -148,27 +163,27 @@ a{color:inherit}
 @media (max-width:370px){.phone{transform:scale(.88);transform-origin:top center;margin-bottom:-83px}}
 
 /* phone mockup = Main.dc.html */
-.app-bar{padding:10px 4px 6px 16px;display:flex;align-items:center;justify-content:space-between}
+.app-bar{padding-block:10px 6px;padding-inline:16px 4px;display:flex;align-items:center;justify-content:space-between}
 .app-title{display:flex;align-items:center;gap:6px;font-size:22px;font-weight:600;letter-spacing:-.01em}
 .app-status{height:26px;padding:0 9px;display:flex;align-items:center;gap:5px;font:400 12px var(--mono);color:var(--muted)}
 .app-status::before{content:"";width:7px;height:7px;border-radius:50%;background:#2E8B57}
 .app-icons{display:flex}
 .app-icons span{width:44px;height:44px;display:flex;align-items:center;justify-content:center}
 .app-rows{display:flex;flex-direction:column;gap:6px;padding:0 16px}
-.app-row{height:58px;display:flex;align-items:center;gap:12px;padding:0 16px 0 10px;border-radius:16px;border:2px solid transparent;background:var(--surface)}
+.app-row{height:58px;display:flex;align-items:center;gap:12px;padding-block:0;padding-inline:10px 16px;border-radius:16px;border:2px solid transparent;background:var(--surface)}
 .app-row.active{border-color:var(--accent)}
 .app-flag{width:42px;height:42px;border-radius:50%;border:2px solid transparent;padding:2px;flex-shrink:0;display:flex}
 .app-row.active .app-flag{border-color:var(--accent)}
 .app-flag svg{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
 .app-name{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.3}
 .app-name b{font-size:15px;font-weight:600}
-.app-name b span{margin-left:6px;font-size:13px;font-weight:400;color:var(--muted)}
+.app-name b span{margin-inline-start:6px;font-size:13px;font-weight:400;color:var(--muted)}
 .app-name small{font-size:12px;color:var(--muted)}
 .app-amount{font:500 21px var(--mono)}
 .app-row.active .app-amount{color:var(--accent)}
 .app-add{height:52px;border-radius:16px;border:1.5px dashed var(--outline);display:flex;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:14px;font-weight:500}
 .app-status-row{margin-top:auto;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px 6px 12px}
-.app-pair{height:44px;padding:0 14px 0 12px;border-radius:22px;display:flex;align-items:center;gap:8px;background:var(--surface);font:500 13px var(--mono)}
+.app-pair{height:44px;padding-block:0;padding-inline:12px 14px;border-radius:22px;display:flex;align-items:center;gap:8px;background:var(--surface);font:500 13px var(--mono)}
 .app-pair svg{color:var(--accent)}
 .app-pad{background:var(--p-pad);padding:12px 12px 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;border-radius:24px 24px 0 0}
 .app-pad span{height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:500 22px var(--mono);background:var(--p-key)}
@@ -187,7 +202,7 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 .card{background:var(--surface);border-radius:20px;padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px}
 .card .icon{width:48px;height:48px;border-radius:14px;background:var(--tint);color:var(--accent-ink);display:flex;align-items:center;justify-content:center}
 .card h3{margin:8px 0 0;font-size:19px;font-weight:600;line-height:1.3}
-.tag{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;background:var(--tint);color:var(--accent-ink);font-size:12px;font-weight:600;letter-spacing:.02em;vertical-align:3px}
+.tag{display:inline-block;margin-inline-start:6px;padding:1px 8px;border-radius:999px;background:var(--tint);color:var(--accent-ink);font-size:12px;font-weight:600;letter-spacing:.02em;vertical-align:3px}
 .card p{margin:0;font-size:16px;line-height:1.55;color:var(--muted)}
 .soon{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:15px;color:var(--muted)}
 .soon b{font-weight:600;color:var(--ink)}
@@ -201,6 +216,7 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 .examples{flex:999 1 560px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 .example{border-radius:18px;padding:18px 20px 20px;background:#24262B;box-shadow:inset 0 0 0 2px #FF7A4D;display:flex;flex-direction:column;gap:4px}
 .example span{font-size:13px;font-weight:500;color:#C3C5CB}
+/* Right-aligned like a calculator display, on right-to-left pages too. */
 .example code{padding-top:10px;text-align:right;font:15px var(--mono);color:#A3A6AD}
 .example output{text-align:right;font:500 30px var(--mono);letter-spacing:-.02em;color:#FF9A76}
 
@@ -231,14 +247,14 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 
 /* legal pages */
 .legal{max-width:760px;margin:0 auto;padding:40px 24px 96px;display:flex;flex-direction:column;gap:32px;line-height:1.65}
-@media (max-width:480px){.legal{padding-left:16px;padding-right:16px}}
+@media (max-width:480px){.legal{padding-inline:16px}}
 .legal h1{margin:0;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-.035em}
 .legal .meta{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:15px;color:var(--muted)}
 .legal .meta a{color:var(--accent-ink);font-weight:500}
 .summary{background:var(--tint);border-radius:22px;padding:26px 28px;display:flex;flex-direction:column;gap:14px}
 .summary h2{margin:0;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink)}
 .summary p{margin:0;font-size:19px;line-height:1.55;font-weight:500}
-.questions{margin:0;padding-left:24px;display:flex;flex-direction:column;gap:8px;font-size:17px;line-height:1.45;font-weight:500}
+.questions{margin:0;padding-inline-start:24px;display:flex;flex-direction:column;gap:8px;font-size:17px;line-height:1.45;font-weight:500}
 .questions a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px}
 .questions a:hover{color:var(--accent-ink)}
 .legal section[id]{scroll-margin-top:24px}
@@ -248,7 +264,7 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 .legal section:last-child{padding-bottom:0}
 .legal section h2{margin:0;font-size:20px;font-weight:600;line-height:1.3}
 .legal section p,.legal section ul{margin:0}
-.legal section ul{padding-left:22px;display:flex;flex-direction:column;gap:4px}
+.legal section ul{padding-inline-start:22px;display:flex;flex-direction:column;gap:4px}
 .legal section a{color:var(--accent-ink);overflow-wrap:anywhere}
 .host{font:15px var(--mono)}
 @media (prefers-color-scheme:dark){.phone{box-shadow:0 0 0 1px #3A3D44,0 30px 60px -20px rgba(0,0,0,.6)}}
@@ -280,8 +296,32 @@ html:lang(ja) .hero h1,html:lang(ko) .hero h1,html:lang(zh) .hero h1{font-size:c
 html:lang(ja) .legal h1,html:lang(ko) .legal h1,html:lang(zh) .legal h1,
 html:lang(ja) .og h1,html:lang(ko) .og h1,html:lang(zh) .og h1{line-height:1.2}
 
+/* Right-to-left pages (ar, he, fa): the layout mirrors through dir="rtl" and the logical properties above.
+   Amounts, the calculator, the keypad, the pair and addresses stay left to right; links and code are isolated so
+   punctuation around them stays in place. The scaled app is anchored at its start edge. Arabic letters are joined,
+   so no tracking anywhere; neither script has case. Arabic script needs more line height for its marks. */
+html[dir=rtl] .app{transform-origin:100% 0}
+html[dir=rtl] .app-amount,html[dir=rtl] .app-status,html[dir=rtl] .app-pair,html[dir=rtl] .app-pad,
+html[dir=rtl] .example code,html[dir=rtl] .example output,html[dir=rtl] .host,html[dir=rtl] a[href^="mailto:"],
+html[dir=rtl] a[href^="http"]{direction:ltr;unicode-bidi:isolate}
+html[dir=rtl] a,html[dir=rtl] code{unicode-bidi:isolate}
+html[dir=rtl] .more svg{transform:scaleX(-1)}
+/* The symbol is an LTR island left of the code: its gap sits on its right (physical, the span itself is LTR). */
+html[dir=rtl] .app-name b span{direction:ltr;unicode-bidi:isolate;margin:0 6px 0 0}
+html:lang(ar) .display,html:lang(he) .display,html:lang(fa) .display,
+html:lang(ar) .eyebrow,html:lang(he) .eyebrow,html:lang(fa) .eyebrow,
+html:lang(ar) .plan h3,html:lang(he) .plan h3,html:lang(fa) .plan h3,
+html:lang(ar) .summary h2,html:lang(he) .summary h2,html:lang(fa) .summary h2,
+html:lang(ar) .tag,html:lang(he) .tag,html:lang(fa) .tag{letter-spacing:0;text-transform:none}
+html:lang(ar) body,html:lang(fa) body{line-height:1.75}
+html:lang(ar) .hero h1,html:lang(fa) .hero h1,html:lang(ar) .legal h1,html:lang(fa) .legal h1,
+html:lang(ar) .og h1,html:lang(fa) .og h1{line-height:1.3}
+html:lang(ar) h2.display,html:lang(fa) h2.display,html:lang(ar) .pro-text h2,html:lang(fa) .pro-text h2,
+html:lang(ar) .privacy-card h2,html:lang(fa) .privacy-card h2{line-height:1.35}
+html:lang(he) .hero h1,html:lang(he) .legal h1,html:lang(he) .og h1{line-height:1.15}
+
 /* link preview image, rendered by render_og_images.py */
-.og{width:1200px;height:630px;overflow:hidden;display:flex;align-items:center;gap:40px;padding:0 0 0 80px;background:var(--bg)}
+.og{width:1200px;height:630px;overflow:hidden;display:flex;align-items:center;gap:40px;padding-inline-start:80px;background:var(--bg)}
 .og-text{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:26px}
 .og .brand span{font-size:34px}
 .og h1{margin:0;font-size:76px;line-height:1.02;letter-spacing:-.035em}
