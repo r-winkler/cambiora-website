@@ -103,7 +103,11 @@ a{color:inherit}
 .app-name small{font-size:12px;color:var(--muted)}
 .app-amount{font:500 21px var(--mono)}
 .app-row.active .app-amount{color:var(--accent)}
-.app-pad{margin-top:auto;background:var(--p-pad);padding:12px 12px 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;border-radius:24px 24px 0 0}
+.app-add{height:52px;border-radius:16px;border:1.5px dashed var(--outline);display:flex;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:14px;font-weight:500}
+.app-status-row{margin-top:auto;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px 6px 12px}
+.app-pair{height:44px;padding:0 14px 0 12px;border-radius:22px;display:flex;align-items:center;gap:8px;background:var(--surface);font:500 13px var(--mono)}
+.app-pair svg{color:var(--accent)}
+.app-pad{background:var(--p-pad);padding:12px 12px 16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;border-radius:24px 24px 0 0}
 .app-pad span{height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:500 22px var(--mono);background:var(--p-key)}
 .app-pad .fn{background:var(--p-fn);color:var(--p-fn-ink)}
 .app-pad .op{background:var(--p-op);color:var(--p-op-ink)}
@@ -120,6 +124,7 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 .card{background:var(--surface);border-radius:20px;padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px}
 .card .icon{width:48px;height:48px;border-radius:14px;background:var(--tint);color:var(--accent-ink);display:flex;align-items:center;justify-content:center}
 .card h3{margin:8px 0 0;font-size:19px;font-weight:600;line-height:1.3}
+.tag{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;background:var(--tint);color:var(--accent-ink);font-size:12px;font-weight:600;letter-spacing:.02em;vertical-align:3px}
 .card p{margin:0;font-size:16px;line-height:1.55;color:var(--muted)}
 .soon{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:15px;color:var(--muted)}
 .soon b{font-weight:600;color:var(--ink)}
@@ -137,6 +142,20 @@ h2.display{margin:0;font-size:clamp(30px,3.6vw,42px);line-height:1.12}
 .example output{text-align:right;font:500 30px var(--mono);letter-spacing:-.02em;color:#FF9A76}
 
 /* privacy teaser */
+.pro-section{padding-top:96px}
+.pro-card{background:var(--surface);border-radius:28px;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;gap:32px 56px}
+.pro-text{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.pro-text h2{font-size:clamp(28px,3.2vw,38px);line-height:1.15}
+.pro-text p{margin:0;font-size:18px;line-height:1.55;color:var(--muted)}
+.plans{flex:999 1 480px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.plan{border-radius:18px;padding:20px 20px 22px;background:var(--bg)}
+.plan h3{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.plan ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.plan li{display:flex;align-items:flex-start;gap:10px;font-weight:500;line-height:1.4}
+.plan li .check{margin-top:2px;color:var(--muted)}
+.plan-pro{background:var(--tint)}
+.plan-pro h3{color:var(--accent-ink)}
+.plan-pro li .check{color:var(--accent)}
 .privacy{padding-top:96px;padding-bottom:96px}
 .privacy-card{background:var(--surface);border-radius:28px;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;gap:32px 56px}
 .privacy-card > div{flex:999 1 420px;min-width:0;display:flex;flex-direction:column;gap:14px}
