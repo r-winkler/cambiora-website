@@ -39,7 +39,7 @@
 <body>
 <header class="wrap site-header">
 <a class="brand" href="/en/"><img src="/assets/icon.svg" width="36" height="36" alt=""><span>Cambiora</span></a>
-<nav class="nav" aria-label="Main navigation"><a href="/en/#features">Features</a><a href="/privacy/" aria-current="page">Privacy</a><a href="mailto:contact@cambiora.com">Contact</a><details class="lang-menu"><summary aria-label="Language: English">EN</summary><ul><li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li><li><a href="/privacy/" lang="en" hreflang="en" aria-current="true">English</a></li><li><a href="/fr/confidentialite/" lang="fr" hreflang="fr">Français</a></li><li><a href="/it/privacy/" lang="it" hreflang="it">Italiano</a></li><li><a href="/es/privacidad/" lang="es" hreflang="es">Español</a></li><li><a href="/nl/privacy/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/pl/prywatnosc/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/pt/privacidade/" lang="pt-BR" hreflang="pt-BR">Português</a></li><li><a href="/tr/gizlilik/" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="/id/privasi/" lang="id" hreflang="id">Bahasa Indonesia</a></li></ul></details></nav>
+<nav class="nav" aria-label="Main navigation"><a href="/en/#features">Features</a><a href="/help/">Help</a><a href="/privacy/" aria-current="page">Privacy</a><details class="lang-menu"><summary aria-label="Language: English">EN</summary><ul><li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li><li><a href="/privacy/" lang="en" hreflang="en" aria-current="true">English</a></li><li><a href="/fr/confidentialite/" lang="fr" hreflang="fr">Français</a></li><li><a href="/it/privacy/" lang="it" hreflang="it">Italiano</a></li><li><a href="/es/privacidad/" lang="es" hreflang="es">Español</a></li><li><a href="/nl/privacy/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/pl/prywatnosc/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/pt/privacidade/" lang="pt-BR" hreflang="pt-BR">Português</a></li><li><a href="/tr/gizlilik/" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="/id/privasi/" lang="id" hreflang="id">Bahasa Indonesia</a></li></ul></details></nav>
 </header>
 <main class="legal">
 <div>
@@ -54,14 +54,14 @@
 </section>
 <section><h2>Data on your device</h2>
 <p>Cambiora stores locally on your device:</p>
-<ul><li>your settings (e.g. theme, language, number format),</li><li>your selected currencies, their order and the last amount you entered,</li><li>the most recently loaded exchange rates and rate history, so the app works offline,</li><li>the settings of your home screen widgets.</li></ul>
+<ul><li>your settings (e.g. theme, language, number format),</li><li>your selected currencies, their order and the last amount you entered,</li><li>the most recently loaded exchange rates and rate history, so the app works offline,</li><li>the settings of your home screen widgets,</li><li>your rate alerts (currency pair, target rate and when it was reached); they are checked on your device only and trigger local notifications.</li></ul>
 <p>This data does not leave your device and we cannot see it. It is deleted when you uninstall the app or clear its data in the system settings. Whether it is included in your device backup (e.g. Google or iCloud backup) depends on your system settings.</p>
 </section>
 <section><h2>Loading exchange rates</h2>
 <p>To load current rates, the app requests public rate services directly:</p>
 <ul><li>Frankfurter (<span class="host">api.frankfurter.dev</span>) for the European Central Bank reference rates and rate history,</li><li>currency-api via jsDelivr (<span class="host">cdn.jsdelivr.net</span>) or Cloudflare Pages (<span class="host">currency-api.pages.dev</span>) for further currencies and precious metals,</li><li>Coinbase (<span class="host">api.coinbase.com</span>) for crypto currencies.</li></ul>
 <p>These requests contain no information about you, your selection or your amounts. As with any internet request, the providers technically receive your IP address, the time and information about the device type or app version. The respective providers are responsible for this processing under their own privacy policies. We do not receive this data.</p>
-<p>The home screen widgets also refresh rates through these services, about once per hour in the background, as long as a widget is placed.</p>
+<p>The home screen widgets also refresh rates through these services, about once per hour in the background, as long as a widget is placed or a rate alert is active.</p>
 </section>
 <section><h2>Purchases (Cambiora Pro)</h2>
 <p>Buying Cambiora Pro is handled entirely by Google Play or the App Store. We do not receive any payment data. The app only learns from the store whether Pro was purchased and stores this status locally.</p>
@@ -85,6 +85,7 @@
 <footer class="site-footer"><div class="wrap">
 <div class="brand-small"><img src="/assets/icon.svg" width="28" height="28" alt=""><b>Cambiora</b><span>· © 2026</span></div>
 <nav aria-label="Footer">
+<a href="/help/">Help</a>
 <a href="/privacy/">Privacy</a>
 <a href="mailto:contact@cambiora.com">contact@cambiora.com</a>
 </nav>

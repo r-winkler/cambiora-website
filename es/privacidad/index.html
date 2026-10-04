@@ -39,7 +39,7 @@
 <body>
 <header class="wrap site-header">
 <a class="brand" href="/es/"><img src="/assets/icon.svg" width="36" height="36" alt=""><span>Cambiora</span></a>
-<nav class="nav" aria-label="Navegación principal"><a href="/es/#funciones">Funciones</a><a href="/es/privacidad/" aria-current="page">Privacidad</a><a href="mailto:contact@cambiora.com">Contacto</a><details class="lang-menu"><summary aria-label="Idioma: Español">ES</summary><ul><li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li><li><a href="/privacy/" lang="en" hreflang="en">English</a></li><li><a href="/fr/confidentialite/" lang="fr" hreflang="fr">Français</a></li><li><a href="/it/privacy/" lang="it" hreflang="it">Italiano</a></li><li><a href="/es/privacidad/" lang="es" hreflang="es" aria-current="true">Español</a></li><li><a href="/nl/privacy/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/pl/prywatnosc/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/pt/privacidade/" lang="pt-BR" hreflang="pt-BR">Português</a></li><li><a href="/tr/gizlilik/" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="/id/privasi/" lang="id" hreflang="id">Bahasa Indonesia</a></li></ul></details></nav>
+<nav class="nav" aria-label="Navegación principal"><a href="/es/#funciones">Funciones</a><a href="/es/ayuda/">Ayuda</a><a href="/es/privacidad/" aria-current="page">Privacidad</a><details class="lang-menu"><summary aria-label="Idioma: Español">ES</summary><ul><li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li><li><a href="/privacy/" lang="en" hreflang="en">English</a></li><li><a href="/fr/confidentialite/" lang="fr" hreflang="fr">Français</a></li><li><a href="/it/privacy/" lang="it" hreflang="it">Italiano</a></li><li><a href="/es/privacidad/" lang="es" hreflang="es" aria-current="true">Español</a></li><li><a href="/nl/privacy/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/pl/prywatnosc/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/pt/privacidade/" lang="pt-BR" hreflang="pt-BR">Português</a></li><li><a href="/tr/gizlilik/" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="/id/privasi/" lang="id" hreflang="id">Bahasa Indonesia</a></li></ul></details></nav>
 </header>
 <main class="legal">
 <div>
@@ -54,14 +54,14 @@
 </section>
 <section><h2>Datos en tu dispositivo</h2>
 <p>Cambiora guarda localmente en tu dispositivo:</p>
-<ul><li>tus ajustes (p. ej. tema, idioma, formato de números),</li><li>tus divisas seleccionadas, su orden y el último importe introducido,</li><li>los últimos tipos de cambio cargados y el historial, para que la app funcione sin conexión,</li><li>los ajustes de tus widgets para la pantalla de inicio.</li></ul>
+<ul><li>tus ajustes (p. ej. tema, idioma, formato de números),</li><li>tus divisas seleccionadas, su orden y el último importe introducido,</li><li>los últimos tipos de cambio cargados y el historial, para que la app funcione sin conexión,</li><li>los ajustes de tus widgets para la pantalla de inicio,</li><li>tus alertas de tipo de cambio (par de divisas, tipo de cambio objetivo y cuándo se alcanzó); se comprueban solo en tu dispositivo y generan notificaciones locales.</li></ul>
 <p>Estos datos no salen de tu dispositivo y no podemos verlos. Se eliminan cuando desinstalas la app o borras sus datos en los ajustes del sistema. Que se incluyan en la copia de seguridad de tu dispositivo (p. ej. copia de Google o iCloud) depende de tus ajustes del sistema.</p>
 </section>
 <section><h2>Carga de los tipos de cambio</h2>
 <p>Para cargar los tipos actuales, la app consulta directamente servicios públicos de cotizaciones:</p>
 <ul><li>Frankfurter (<span class="host">api.frankfurter.dev</span>) para los tipos de referencia del Banco Central Europeo y el historial,</li><li>currency-api a través de jsDelivr (<span class="host">cdn.jsdelivr.net</span>) o Cloudflare Pages (<span class="host">currency-api.pages.dev</span>) para otras divisas y los metales preciosos,</li><li>Coinbase (<span class="host">api.coinbase.com</span>) para las criptomonedas.</li></ul>
 <p>Estas solicitudes no contienen información sobre ti, tu selección ni tus importes. Como en cualquier solicitud en Internet, los proveedores reciben por motivos técnicos tu dirección IP, la hora e información sobre el tipo de dispositivo o la versión de la app. De este tratamiento son responsables los respectivos proveedores según sus propias políticas de privacidad. Nosotros no recibimos estos datos.</p>
-<p>Los widgets para la pantalla de inicio también actualizan los tipos a través de estos servicios, aproximadamente una vez por hora en segundo plano, mientras haya un widget colocado.</p>
+<p>Los widgets para la pantalla de inicio también actualizan los tipos a través de estos servicios, aproximadamente una vez por hora en segundo plano, mientras haya un widget colocado o una alerta de tipo de cambio activa.</p>
 </section>
 <section><h2>Compras (Cambiora Pro)</h2>
 <p>La compra de Cambiora Pro se gestiona íntegramente a través de Google Play o la App Store. No recibimos datos de pago. La app solo sabe por la tienda si se ha comprado Pro y guarda este estado localmente.</p>
@@ -85,6 +85,7 @@
 <footer class="site-footer"><div class="wrap">
 <div class="brand-small"><img src="/assets/icon.svg" width="28" height="28" alt=""><b>Cambiora</b><span>· © 2026</span></div>
 <nav aria-label="Pie de página">
+<a href="/es/ayuda/">Ayuda</a>
 <a href="/es/privacidad/">Privacidad</a>
 <a href="mailto:contact@cambiora.com">contact@cambiora.com</a>
 </nav>

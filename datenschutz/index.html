@@ -39,7 +39,7 @@
 <body>
 <header class="wrap site-header">
 <a class="brand" href="/"><img src="/assets/icon.svg" width="36" height="36" alt=""><span>Cambiora</span></a>
-<nav class="nav" aria-label="Hauptnavigation"><a href="/#funktionen">Funktionen</a><a href="/datenschutz/" aria-current="page">Datenschutz</a><a href="mailto:contact@cambiora.com">Kontakt</a><details class="lang-menu"><summary aria-label="Sprache: Deutsch">DE</summary><ul><li><a href="/datenschutz/" lang="de" hreflang="de" aria-current="true">Deutsch</a></li><li><a href="/privacy/" lang="en" hreflang="en">English</a></li><li><a href="/fr/confidentialite/" lang="fr" hreflang="fr">Français</a></li><li><a href="/it/privacy/" lang="it" hreflang="it">Italiano</a></li><li><a href="/es/privacidad/" lang="es" hreflang="es">Español</a></li><li><a href="/nl/privacy/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/pl/prywatnosc/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/pt/privacidade/" lang="pt-BR" hreflang="pt-BR">Português</a></li><li><a href="/tr/gizlilik/" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="/id/privasi/" lang="id" hreflang="id">Bahasa Indonesia</a></li></ul></details></nav>
+<nav class="nav" aria-label="Hauptnavigation"><a href="/#funktionen">Funktionen</a><a href="/hilfe/">Hilfe</a><a href="/datenschutz/" aria-current="page">Datenschutz</a><details class="lang-menu"><summary aria-label="Sprache: Deutsch">DE</summary><ul><li><a href="/datenschutz/" lang="de" hreflang="de" aria-current="true">Deutsch</a></li><li><a href="/privacy/" lang="en" hreflang="en">English</a></li><li><a href="/fr/confidentialite/" lang="fr" hreflang="fr">Français</a></li><li><a href="/it/privacy/" lang="it" hreflang="it">Italiano</a></li><li><a href="/es/privacidad/" lang="es" hreflang="es">Español</a></li><li><a href="/nl/privacy/" lang="nl" hreflang="nl">Nederlands</a></li><li><a href="/pl/prywatnosc/" lang="pl" hreflang="pl">Polski</a></li><li><a href="/pt/privacidade/" lang="pt-BR" hreflang="pt-BR">Português</a></li><li><a href="/tr/gizlilik/" lang="tr" hreflang="tr">Türkçe</a></li><li><a href="/id/privasi/" lang="id" hreflang="id">Bahasa Indonesia</a></li></ul></details></nav>
 </header>
 <main class="legal">
 <div>
@@ -54,14 +54,14 @@
 </section>
 <section><h2>Daten auf deinem Gerät</h2>
 <p>Cambiora speichert lokal auf deinem Gerät:</p>
-<ul><li>deine Einstellungen (z. B. Design, Sprache, Zahlenformat),</li><li>deine Währungsauswahl, ihre Reihenfolge und den zuletzt eingegebenen Betrag,</li><li>die zuletzt geladenen Wechselkurse und den Kursverlauf, damit die App offline funktioniert,</li><li>die Einstellungen deiner Homescreen-Widgets.</li></ul>
+<ul><li>deine Einstellungen (z. B. Design, Sprache, Zahlenformat),</li><li>deine Währungsauswahl, ihre Reihenfolge und den zuletzt eingegebenen Betrag,</li><li>die zuletzt geladenen Wechselkurse und den Kursverlauf, damit die App offline funktioniert,</li><li>die Einstellungen deiner Homescreen-Widgets,</li><li>deine Kursalarme (Währungspaar, Zielkurs und wann er erreicht wurde); sie werden nur auf deinem Gerät geprüft und lösen lokale Benachrichtigungen aus.</li></ul>
 <p>Diese Daten verlassen dein Gerät nicht und werden von uns nicht eingesehen. Sie werden gelöscht, wenn du die App deinstallierst oder ihre Daten in den Systemeinstellungen löschst. Ob sie in die Sicherung deines Geräts (z. B. Google- oder iCloud-Backup) aufgenommen werden, bestimmen deine Systemeinstellungen.</p>
 </section>
 <section><h2>Abruf der Wechselkurse</h2>
 <p>Um aktuelle Kurse zu laden, ruft die App öffentliche Kursdienste direkt ab:</p>
 <ul><li>Frankfurter (<span class="host">api.frankfurter.dev</span>) für die Referenzkurse der Europäischen Zentralbank und den Kursverlauf,</li><li>currency-api über jsDelivr (<span class="host">cdn.jsdelivr.net</span>) bzw. Cloudflare Pages (<span class="host">currency-api.pages.dev</span>) für weitere Währungen und Edelmetalle,</li><li>Coinbase (<span class="host">api.coinbase.com</span>) für Kryptowährungen.</li></ul>
 <p>Die Anfragen enthalten keine Angaben über dich, deine Auswahl oder deine Beträge. Wie bei jedem Abruf im Internet erhalten die Anbieter technisch bedingt deine IP-Adresse, den Zeitpunkt und Angaben zum Gerätetyp bzw. zur App-Version. Für diese Verarbeitung sind die jeweiligen Anbieter nach ihren eigenen Datenschutzbestimmungen verantwortlich. Wir erhalten diese Daten nicht.</p>
-<p>Auch die Homescreen-Widgets aktualisieren die Kurse über diese Dienste, ungefähr einmal pro Stunde im Hintergrund, solange ein Widget platziert ist.</p>
+<p>Auch die Homescreen-Widgets aktualisieren die Kurse über diese Dienste, ungefähr einmal pro Stunde im Hintergrund, solange ein Widget platziert oder ein Kursalarm aktiv ist.</p>
 </section>
 <section><h2>Käufe (Cambiora Pro)</h2>
 <p>Der Kauf von Cambiora Pro wird vollständig über Google Play bzw. den App Store abgewickelt. Zahlungsdaten erhalten wir nicht. Die App erfährt vom Store nur, ob Pro gekauft wurde, und speichert diesen Status lokal.</p>
@@ -85,6 +85,7 @@
 <footer class="site-footer"><div class="wrap">
 <div class="brand-small"><img src="/assets/icon.svg" width="28" height="28" alt=""><b>Cambiora</b><span>· © 2026</span></div>
 <nav aria-label="Fusszeile">
+<a href="/hilfe/">Hilfe</a>
 <a href="/datenschutz/">Datenschutz</a>
 <a href="mailto:contact@cambiora.com">contact@cambiora.com</a>
 </nav>
